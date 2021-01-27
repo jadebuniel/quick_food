@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledNavbar = styled.nav`
-    background-color: var(--gray);
+    /* background-color: var(--gray); */
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
@@ -9,8 +9,9 @@ export const StyledNavbar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 100;
     @media screen and (max-width: 768px){
         flex-direction: column;
         justify-content: unset;

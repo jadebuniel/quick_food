@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 *{
   margin: 0;
@@ -19,4 +19,5 @@ li{
   --gray: #808080;
   --text-lighter: #555555;
   --light-gray: #DDDDDD;
+  --dark-gray: #5F5F5F;
 }

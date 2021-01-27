@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react'
+import React, {useContext, useState, useEffect, useRef} from 'react'
 import {IsMobileContext} from '../../context/IsMobile'
 import logo from '../../assets/logo.svg'
 import {StyledNavbar} from './NavbarStyles'
@@ -8,14 +8,25 @@ import {Link} from 'react-router-dom'
 const Navbar = () => {
     const [isMobile] = useContext(IsMobileContext)
     const [hamburger, setHamburger] = useState(false)
+    const nav = useRef()
 
     useEffect(() => {
         setHamburger(!isMobile && false)
     }, [isMobile])
 
+    document.addEventListener('scroll', () => {
+        if (nav.current){
+            if (window.scrollY <= 100){
+                nav.current.style.backgroundColor = 'transparent'
+            } else{
+                nav.current.style.backgroundColor = 'var(--gray)'
+            }
+        }
+    })
+
 
     return (
-        <StyledNavbar>
+        <StyledNavbar ref={nav}>
             <div className="logo-container">
                 <Link to='/'><img src={logo} alt=""/></Link>
                 <div className={hamburger ? "hamburger active" : "hamburger"} onClick={() => setHamburger(!hamburger)}>
