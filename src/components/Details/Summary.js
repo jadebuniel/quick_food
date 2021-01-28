@@ -33,6 +33,7 @@ const orders = [
 const StyledSummary = styled.div`
     border: 1px solid var(--light-gray);
     background-color: white;
+    max-height: 639px;
     
     .title{
         font-weight: 700;

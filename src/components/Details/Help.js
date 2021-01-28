@@ -7,6 +7,7 @@ const StyledHelp = styled.div`
     padding: 1rem 2rem;
     text-align: center;
     max-height: 280px;
+    margin-top: 2rem;
     .title{
         font-size: 2rem;
         margin-top: 1rem;
