@@ -13,6 +13,7 @@ function App() {
         <Route path='/restaurants' component={Restaurants} />
         <Route path='/details' component={Details} />
         <Route path='/order' component={Order} />
+        <Route component={Home} />
       </Switch>  
     </div>
   );

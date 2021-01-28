@@ -33,7 +33,8 @@ const orders = [
 const StyledSummary = styled.div`
     border: 1px solid var(--light-gray);
     background-color: white;
-    max-height: 639px;
+    /* max-height: 639px; */
+    max-height: ${({details}) => details ? "639px" : "unset"};
     
     .title{
         font-weight: 700;
@@ -85,7 +86,7 @@ const StyledSummary = styled.div`
             display: block;
             border: none;
             border-top: 2px solid whitesmoke;
-            margin: 1rem 0 1rem 0;
+            margin: 1rem 0 1rem 0 !important;
     }
     .second{
         display: flex;
@@ -160,7 +161,7 @@ const StyledSummary = styled.div`
 const Summary = ({details}) => {
     const history = useHistory()
     return (
-        <StyledSummary>
+        <StyledSummary details={details}>
             <p className="title">Your order</p>
             <div className="first">
                 {orders.map((order, index) => (
