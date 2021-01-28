@@ -85,7 +85,7 @@ const StyledSummary = styled.div`
     hr{
             display: block;
             border: none;
-            border-top: 2px solid whitesmoke;
+            border-top: 2px solid whitesmoke !important;
             margin: 1rem 0 1rem 0 !important;
     }
     .second{
