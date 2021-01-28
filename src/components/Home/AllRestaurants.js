@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import {useHistory} from 'react-router-dom'
 
 const StyledAll = styled.div`
     max-width: 1920px;
     background-color: #85C99D;
+    margin: 0 auto;
     .container{
         max-width: 1500px;
         margin: 0 auto;
@@ -63,6 +65,7 @@ const StyledAll = styled.div`
 `
 
 const AllRestaurants = () => {
+    const history = useHistory()
     return (
         <StyledAll>
             <div className="container">
@@ -70,7 +73,7 @@ const AllRestaurants = () => {
                     <p className="header">Choose from over 2,000 Restaurants</p>
                     <p className="sub">Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.</p>
                </div>
-               <button className="button-view">view all restaurants</button>
+               <button className="button-view" onClick={() => history.push('/restaurants')}>view all restaurants</button>
             </div>
         </StyledAll>
     )

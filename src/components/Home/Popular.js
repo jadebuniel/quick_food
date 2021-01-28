@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import RestaurantCard from './RestaurantCard'
 
-const data = [
+export const data = [
     {
         name: 'Taco Mexican',
         category: 'Mexican / American',

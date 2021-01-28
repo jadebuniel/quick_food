@@ -5,6 +5,7 @@ import stars from '../../assets/fourstars.svg'
 import check from '../../assets/circleCheck.svg'
 import error from '../../assets/circleX.svg'
 import ribbon from '../../assets/ribbon.svg'
+import {useHistory} from 'react-router-dom'
 
 const StyledCard = styled.div`
     display: flex;
@@ -14,6 +15,7 @@ const StyledCard = styled.div`
     width: auto;
     gap: 2rem;
     align-items: center; 
+    background-color: ${({background}) => background == 'white' ? 'white' : 'unset'};
     @media screen and (max-width: 400px){
         padding: 1.3rem 1rem;
     }
@@ -93,9 +95,10 @@ const StyledCard = styled.div`
     }
 `
 
-const RestaurantCard = ({home, data}) => {
+const RestaurantCard = ({home, data, background}) => {
+    const history = useHistory()
     return (
-        <StyledCard>
+        <StyledCard background={background}>
             <div className="image-container">
                 <img src={dummy} alt="image-placeholder"/>
             </div>
@@ -119,7 +122,7 @@ const RestaurantCard = ({home, data}) => {
                 </div>
             </div>
             <img src={ribbon} className="ribbon"/>
-            {!home && <button className="menu">view menu</button>}
+            {!home && <button className="menu" onClick={() => history.push('/details')}>view menu</button>}
         </StyledCard>
     )
 }

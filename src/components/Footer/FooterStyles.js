@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StyledFooter = styled.div`
     max-width: 1920px;
     padding: 3rem 0;
+    margin: 0 auto;
     .footer-container{
         max-width: 1700px;
         margin: 0 auto;

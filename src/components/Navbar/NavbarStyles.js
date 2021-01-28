@@ -11,7 +11,9 @@ export const StyledNavbar = styled.nav`
     align-items: center;
     position: fixed;
     top: 0;
+    left: 50%;
     z-index: 100;
+    transform: translateX(-50%);
     @media screen and (max-width: 768px){
         flex-direction: column;
         justify-content: unset;
